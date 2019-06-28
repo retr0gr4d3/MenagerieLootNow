@@ -58,7 +58,7 @@ def lootWeapons():
 
 99 - Return to Menu
 
-Please pick a number from 1-7: ''')
+Please pick a number from 1-7 / 99: ''')
     if cat01 == '1':
         subMGs()
     elif cat01 == '2':
