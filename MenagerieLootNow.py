@@ -44,8 +44,8 @@ DustRockBlues
 
 
 
-def pickLoot():
-    cat01 = input('''Chalice of Opulence loot pool:
+def lootWeapons():
+    cat01 = input('''Chalice of Opulence weapon loot pool:
 
 1 - Sub MGs
 2 - Snipers
@@ -55,6 +55,8 @@ def pickLoot():
 5 - Sidearms
 6 - Fusion Rifles
 7 - Shotguns
+
+99 - Return to Menu
 
 Please pick a number from 1-7: ''')
     if cat01 == '1':
@@ -73,7 +75,9 @@ Please pick a number from 1-7: ''')
         fusionRifles()
     elif cat01 == '7':
         shotguns()
+    elif cat01 == '99':
+        mainMenu()
 
     else:
         print('Invalid answer. Please try again.')
-        pickLoot()
+        lootWeapons()
