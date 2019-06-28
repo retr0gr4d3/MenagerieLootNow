@@ -1,4 +1,5 @@
 from os import system, name
+gloMasterwork = ''
 
 def clear():
     # for windows
@@ -12,12 +13,16 @@ def ninenine():
     
 
 def calusMiniTool():
+    global gloMasterwork
     print('''
 Rune combination...
 
 Slot 1 (Purple): Beast
-Slot 2 (Purple): Any
-''')
+Slot 2 (Purple): Any''')
+    input('''
+Would you like to select a specific Masterwork for your weapon?
+
+Please chose 'y' or 'n': ''')
 
 def subMGs():
     smgCAT01 = input('''Sub Machine Guns:
