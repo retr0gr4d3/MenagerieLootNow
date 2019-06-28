@@ -19,10 +19,17 @@ Rune combination...
 
 Slot 1 (Purple): Beast
 Slot 2 (Purple): Any''')
-    input('''
+    gloMasterwork = input('''
 Would you like to select a specific Masterwork for your weapon?
 
 Please chose 'y' or 'n': ''')
+    if gloMasterwork == 'y' or gloMasterwork == 'Y':
+        #chose masterwork for slot 3
+    elif gloMasterwork == 'n' or gloMasterwork == 'N':
+        print('Leave Slot 3 Empty')
+        print('*********************')
+    else:
+        print('Sorry')
 
 def subMGs():
     smgCAT01 = input('''Sub Machine Guns:
