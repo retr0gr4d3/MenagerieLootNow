@@ -1,46 +1,82 @@
-1. --Sub MGs--
-CalusMiniTool
-TracklessWaste
-HardTruths
-BadReputation
+from os import system, name
 
-2. --Snipers--
-TwilightOath
-Beloved
-FateCriesFoul
-DreadedVenture
+def clear():
+    # for windows
+    if name == 'nt': 
+        _ = system('cls')
+    # for mac and linux
+    else: 
+        _ = system('clear')
 
-3. --Rocket Launchers--
-BadOmens
-ZenobiaD
-Sleepless
+def ninenine():
+    
 
-3.1 --Heavy MGs--
-FixedOdds
+def calusMiniTool():
+    print('''
+Rune combination...
 
-4. --Hand Cannons--
-Trust
-Austringer
-WakingVigil
-PribinaD
+Slot 1 (Purple): Beast
+Slot 2 (Purple): Any
+''')
 
-5. --Sidearms--
-DrangBaroque
-TheLastDance
-AnonymousAutumn
-SmugglersWord
+def subMGs():
+    smgCAT01 = input('''Sub Machine Guns:
 
-6. --Fusion Rifles--
-ProeliumFR3
-MainIngredient
-TheEpicurean
-ErentilFR4
+1 - CalusMiniTool
+2 - TracklessWaste
+3 - HardTruths
+4 - BadReputation
 
-7. --Shotguns--
-Badlander
-ParcelOfStardust
-ImperialDecree
-DustRockBlues
+99 - Return to Weapon Menu
+
+Please pick a number from 1-4 / 99: ''')
+    if smgCAT01 == '1':
+        clear()
+        calusMiniTool()
+
+#1. --Sub MGs--
+#CalusMiniTool
+#TracklessWaste
+#HardTruths
+#BadReputation
+
+#2. --Snipers--
+#TwilightOath
+#Beloved
+#FateCriesFoul
+#DreadedVenture
+
+#3. --Rocket Launchers--
+#BadOmens
+#ZenobiaD
+#Sleepless
+
+#3.1 --Heavy MGs--
+#FixedOdds
+
+#4. --Hand Cannons--
+#Trust
+#Austringer
+#WakingVigil
+#PribinaD
+
+#5. --Sidearms--
+#DrangBaroque
+#TheLastDance
+#AnonymousAutumn
+#SmugglersWord
+
+#6. --Fusion Rifles--
+#ProeliumFR3
+#MainIngredient
+#TheEpicurean
+#ErentilFR4
+
+#7. --Shotguns--
+#Badlander
+#ParcelOfStardust
+#ImperialDecree
+#DustRockBlues
 
 
 
@@ -60,24 +96,38 @@ def lootWeapons():
 
 Please pick a number from 1-7 / 99: ''')
     if cat01 == '1':
+        clear()
         subMGs()
     elif cat01 == '2':
+        clear()
         snipers()
     elif cat01 == '3':
+        clear()
         rocketLaunchers()
     elif cat01 == '3.1':
+        clear()
         heavyMGs()
     elif cat01 == '4':
+        clear()
         handCannons()
     elif cat01 == '5':
+        clear()
         sidearms()
     elif cat01 == '6':
+        clear()
         fusionRifles()
     elif cat01 == '7':
+        clear()
         shotguns()
     elif cat01 == '99':
+        clear()
         mainMenu()
 
     else:
         print('Invalid answer. Please try again.')
+        clear()
         lootWeapons()
+
+
+lootWeapons()
+
