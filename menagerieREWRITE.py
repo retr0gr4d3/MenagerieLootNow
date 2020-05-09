@@ -1,20 +1,19 @@
 import os
 import sys, traceback
 
-
-
-
-
-if os.getuid() != 0:
+if name == 'nt':
+	print("User is on Windows.")
+else:
+	if os.getuid() != 0:
 	print('''You are running in an unprivileged
 userspace. This is good.''')
-elif os.getuid() == 0:
-	print('''\033[1;91mDo not run this application with
+	elif os.getuid() == 0:
+		print('''\033[1;91mDo not run this application with
 sudo privileges. This is to
 protect you, the end user, from
 any possible damage caused by
 tampered code.\033[1;m''')
-	sys.exit()
+		sys.exit()
 
 def main():
 	try:
