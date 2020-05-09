@@ -1,11 +1,12 @@
 import os
 import sys, traceback
+from os import system, name
 
 if name == 'nt':
 	print("User is on Windows.")
 else:
 	if os.getuid() != 0:
-	print('''You are running in an unprivileged
+		print('''You are running in an unprivileged
 userspace. This is good.''')
 	elif os.getuid() == 0:
 		print('''\033[1;91mDo not run this application with
